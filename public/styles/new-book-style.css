@@ -6,14 +6,38 @@
 
 body {
   display: flex;
-  flex-direction: column;
-  /* justify-content: center; */
-  align-items: center;
-  height: 90%;
+  gap: 20px;
+
 }
 
 h1 {
   font-size: 1.5em;
+}
+
+input {
+  height: max-content;
+  width: 70%;
+}
+
+
+.books-display {
+
+}
+
+
+
+
+.books-display > div {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  border: 2px solid;
+  padding: 5px;
+  margin: 10px;
+}
+
+.books-display > div > h4, p, text {
+  font-size: 0.8rem;
 }
 
 .form-container {
@@ -22,6 +46,7 @@ h1 {
   /* align-items: flex-start; */
   gap: 8px;
   height: 70%;
+  margin: 2%;
 }
 
 form>div {
@@ -36,25 +61,4 @@ label {
 .review {
   display: flex;
   gap: 10px;
-}
-
-.books-display {
-  display: flex;
-  width: 95%;
-  height: 45%;
-  padding-left: 4%;
-  margin: 25px;
-}
-
-.books-display > div {
-  display: flex;
-  flex-direction: column;
-  width: 24%;
-  height: 100%;
-  border: 4px solid ;
-  padding: 0;
-}
-
-.books-display > div > h4, p, text {
-  font-size: 0.6rem;
 }

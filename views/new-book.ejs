@@ -1,0 +1,46 @@
+<!DOCTYPE heml>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" , content="device-width, initial-scale=1.0">
+  <title>Add book</title>
+  <link rel="stylesheet" href="styles/new-book-style.css">
+</head>
+
+
+<body>
+
+  <div class="container">
+    <h1>Add book</h1>
+    <form action="/addbook" method="post">
+      <div>
+        <label for="title">Title: </label>
+        <input type="text" name="title" required>
+      </div>
+      <div>
+        <label for="author">Author: </label>
+        <input type="text" name="author" id="" required>
+      </div>
+      <!-- <div>
+        <label for="bookcover"> Book Cover: </label>
+        <input type="file" name="bookCover" id="" required>
+      </div> -->
+      <div>
+        <label for="dateRead"> Date Read: </label>
+        <input type="date" name="dateRead" id="" required>
+      </div>
+      <div>
+        <label for="rating"> Rating: </label>
+        <input type="number" name="rating" id="" required>
+      </div>
+      <div>
+        <label for="review">Say your mind: </label>
+        <input type="text" name="review" id="" required>
+      </div>
+      <button>Submit</button>
+    </form>
+  </div>
+</body>
+
+</html>

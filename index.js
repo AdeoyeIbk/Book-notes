@@ -4,8 +4,9 @@ import pool from "./config/db.js";
 
 const app = express();
 const port = 3000;
+const db = pool
 
-pool.connect();
+db.connect();
 
 // Middleware
 app.use(express.static("public"));
@@ -21,7 +22,7 @@ app.set("view engine", "ejs");
  *
  */
 
-app.get("/books", (req, res) => {
+app.get("/", (req, res) => {
   res.render("index");
 });
 

@@ -15,18 +15,23 @@
 
     <% if (locals.result) { %>
       <div class="card">
-        <img src="images/<%= result.book_cover %>"
-      alt="How to cope with difficult people book cover">
-        <h3><a href="#"><%= result.title %> - BY <%= result.author %></a></h3>
-        <p class="review-info">DATE READ: <%= result.date_read %>. RATING: <strong><%= result.rating %></strong>/10.</p>
-        <p class="review-text"><%= result.review %></p>
+        <img src="images/<%= result.book_cover %>" alt="How to cope with difficult people book cover">
+        <h3><a href="#">
+            <%= result.title %> - BY <%= result.author %>
+          </a></h3>
+        <p class="review-info">DATE READ: <%= result.date_read %>. RATING: <strong>
+              <%= result.rating %>
+            </strong>/10.</p>
+        <p class="review-text">
+          <%= result.review %>
+        </p>
       </div>
       <% } else { %>
         <h1>No Books to show</h1>
         <% } %>
 
 
-<!-- Great book for anyone that is a person. Exposes the little things that one might not even
+          <!-- Great book for anyone that is a person. Exposes the little things that one might not even
           consider about people. This
           book really shaped my mindset on dealing with people. Must-read for everyone. -->
 

@@ -36,7 +36,7 @@ async function getBooks() {
 // route to handle books page
 app.get("/", async (req, res) => {
   const result = await getBooks();
-  res.render("index", {result: result});
+  res.render("index", { result: result });
 });
 
 // route to render new book page

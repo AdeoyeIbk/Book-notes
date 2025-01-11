@@ -32,3 +32,8 @@ label {
   color: rgb(79, 78, 77);
   font-weight: 700;
 }
+
+.review {
+  display: flex;
+  gap: 10px;
+}

@@ -30,7 +30,7 @@ app.set("view engine", "ejs");
 async function getBooks() {
   const result = await db.query("SELECT * FROM book_data ORDER BY rating DESC");
   console.log(result.rows);
-  return result.rows[0];
+  return result.rows;
 }
 
 // route to handle books page

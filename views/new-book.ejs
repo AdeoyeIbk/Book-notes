@@ -10,7 +10,9 @@
 
 
 <body>
-
+  <!-- 
+  view the books in little boxes and be able to update and delete them from the database 
+   -->
   <div class="container">
     <h1>Add book</h1>
     <form action="/addbook" method="post">
@@ -34,9 +36,9 @@
         <label for="rating"> Rating: </label>
         <input type="number" name="rating" id="" required>
       </div>
-      <div>
-        <label for="review">Say your mind: </label>
-        <input type="text" name="review" id="" required>
+      <div class="review">
+        <label for="review">Review: </label>
+        <textarea type="text" name="review" rows="6" cols="50" placeholder="Say your mind..." required></textarea>
       </div>
       <button>Submit</button>
     </form>

@@ -15,9 +15,8 @@
 
     <% if (locals.result) { %>
       <div class="card">
-        <div class="image"><%= result.book_cover %></div>
-        <!-- <img src="images/How to cope with difficult people.jpeg"
-      alt="How to cope with difficult people book cover"> -->
+        <img src="images/<%= result.book_cover %>"
+      alt="How to cope with difficult people book cover">
         <h3><a href="#"><%= result.title %> - BY <%= result.author %></a></h3>
         <p class="review-info">DATE READ: <%= result.date_read %>. RATING: <strong><%= result.rating %></strong>/10.</p>
         <p class="review-text"><%= result.review %></p>

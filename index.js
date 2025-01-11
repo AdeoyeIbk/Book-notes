@@ -40,8 +40,9 @@ app.get("/", async (req, res) => {
 });
 
 // route to render new book page
-app.get("/new", (req, res) => {
-  res.render("new-book");
+app.get("/new", async (req, res) => {
+  const result = await getBooks();
+  res.render("new-book", {result: result[0]});
 });
 
 // route to handle adding of books to database

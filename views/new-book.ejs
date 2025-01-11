@@ -13,7 +13,16 @@
   <!-- 
   view the books in little boxes and be able to update and delete them from the database 
    -->
-  <div class="container">
+   <div class="books-display">
+    <div>
+      <h4>Book title: <%= result.title %></h4>
+      <p>Author: <%= result.author %></p>
+      <p>Date read: <%= result.date_read %></p>
+      <p>Rating: <%= result.rating %></p>
+      <p>Review: <%= result.review %></p>
+    </div>
+   </div>
+  <div class="form-container">
     <h1>Add book</h1>
     <form action="/addbook" method="post">
       <div>

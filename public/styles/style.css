@@ -58,7 +58,7 @@
   width: 100%;
   }
 
-  img {
+  .image {
     float: left;
     margin-right: var(--img-margin-right);
   }

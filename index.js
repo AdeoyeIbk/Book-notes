@@ -22,8 +22,15 @@ app.set("view engine", "ejs");
  *
  */
 
-app.get("/", (req, res) => {
-  res.render("index");
+async function getBooks() {
+  const result = await db.query("SELECT * FROM book_data ORDER BY rating DESC");
+  console.log(result.rows);
+  return result.rows[0];
+}
+
+app.get("/", async (req, res) => {
+  const result = await getBooks();
+  res.render("index", {result: result});
 });
 
 app.get("/new", (req, res) => {

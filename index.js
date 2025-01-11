@@ -4,7 +4,7 @@ import pool from "./config/db.js";
 
 const app = express();
 const port = 3000;
-const db = pool
+const db = pool;
 
 db.connect();
 
@@ -32,17 +32,19 @@ app.get("/new", (req, res) => {
 
 app.post("/addbook", (req, res) => {
   console.log(req.body);
-  const title = req.body.title;
-  const author = req.body.author;
+  const title = req.body.title.toUpperCase();
+  const author = req.body.author.toUpperCase();
+  const bookCover = req.body.bookCover;
   const dateRead = req.body.dateRead;
   const rating = req.body.rating;
   const review = req.body.review;
   console.log(title);
 
   db.query(
-    "INSERT INTO book_data (title, author, date_read, rating, review) VALUES($1, $2, $3, $4, $5)",
-    [title, author, dateRead, rating, review]
+    "INSERT INTO book_data (title, author, date_read, rating, review, book_cover) VALUES($1, $2, $3, $4, $5, $6)",
+    [title, author, dateRead, rating, review, bookCover]
   );
+  res.redirect("/new");
 });
 
 app.listen(port, () => {

@@ -19,14 +19,6 @@ input {
   width: 70%;
 }
 
-
-.books-display {
-
-}
-
-
-
-
 .books-display > div {
   display: flex;
   flex-direction: column;
@@ -38,6 +30,27 @@ input {
 
 .books-display > div > h4, p, text {
   font-size: 0.8rem;
+}
+
+button {
+  border: 1px solid;
+}
+
+.edit, .edit > a {
+  background-color: rgb(192, 192, 242);
+}
+
+.delete, .delete > a {
+  background-color: rgb(225, 156, 156);
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 .form-container {

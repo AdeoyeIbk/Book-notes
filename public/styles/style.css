@@ -24,7 +24,7 @@
     font-size: var(--font-size);
   }
   .container {
-  margin: 1% 20%;
+  margin: 1% 15%;
 
   }
 
@@ -54,8 +54,13 @@
     font-weight: 600;
   }
 
-  .horizontal-rule {
-  width: 100%;
+  .card-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card {
+    margin: 15% 0%;
   }
 
   img {
@@ -78,9 +83,9 @@
     margin: 0;
   }
 
-.stars {
+/* .stars {
   display: flex;
-}
+} */
 
 .rating-and-stars {
   display: flex;

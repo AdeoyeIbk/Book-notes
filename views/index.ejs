@@ -11,8 +11,10 @@
     </p>
     <p>Sorted with my <span class="bold-text">top recommendations up top:</span> Sort by: <a href="#">Title</a> <a
         href="#">Most recent</a> <a href="#">Rating</a></p>
-    <hr class="horizontal-rule">
-      <!-- books -->
+    <hr>
+    <!-- books -->
+    <div class="card-container">
+
       <% if (locals.result) { %>
         <% result.forEach(result=> { %>
           <div class="card">
@@ -27,13 +29,15 @@
               <%= result.review %>
             </p>
           </div>
-          <% }); } else { %>
-            <h1>No Books to show</h1>
-            <% } %>
+          <% }); %>
+
+            <% } else { %>
+              <h1>No Books to show</h1>
+              <% } %>
     </div>
 
 
-            <!-- Great book for anyone that is a person. Exposes the little things that one might not even
+    <!-- Great book for anyone that is a person. Exposes the little things that one might not even
           consider about people. This
           book really shaped my mindset on dealing with people. Must-read for everyone. -->
 

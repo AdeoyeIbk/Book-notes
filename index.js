@@ -63,12 +63,14 @@ app.post("/addbook", (req, res) => {
   res.redirect("/new");
 });
 
-app.post("/edit", (req, res) => {
+app.post("/edit", (req, res) => {});
 
-});
-
-app.post("/delete", (req, res) => { 
-  
+app.post("/delete", async (req, res) => {
+  const id = req.body
+  console.log(id);
+  //db.query("DELETE FROM book_data WHERE id = $1", [id]);
+  const result = await getBooks();
+  res.render("./admin/new-book", { result: result });
 });
 
 app.listen(port, () => {

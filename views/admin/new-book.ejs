@@ -16,7 +16,7 @@
   <div class="books-display">
     <% if(locals.result) { %>
       <% result.forEach(result=> { %>
-        <div>
+        <div id="<%= result.id %>">
           <h4>Book title: <%= result.title %>
           </h4>
           <p>Author: <%= result.author %>

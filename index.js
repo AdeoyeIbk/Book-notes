@@ -60,7 +60,15 @@ app.post("/addbook", (req, res) => {
     "INSERT INTO book_data (title, author, date_read, rating, review, book_cover) VALUES($1, $2, $3, $4, $5, $6)",
     [title, author, dateRead, rating, review, bookCover]
   );
-  res.redirect("/");
+  res.redirect("/new");
+});
+
+app.post("/edit", (req, res) => {
+
+});
+
+app.post("/delete", (req, res) => { 
+  
 });
 
 app.listen(port, () => {

@@ -65,12 +65,32 @@ app.post("/addbook", (req, res) => {
 
 app.post("/edit", (req, res) => {});
 
-app.post("/delete", async (req, res) => {
-  const id = req.body
-  console.log(id);
-  //db.query("DELETE FROM book_data WHERE id = $1", [id]);
-  const result = await getBooks();
-  res.render("./admin/new-book", { result: result });
+// app.post("/delete", async (req, res) => {
+//   const id = req.body;
+//   console.log(id);
+//   //db.query("DELETE FROM book_data WHERE id = $1", [id]);
+//   const result = await getBooks();
+//   res.render("./admin/new-book", { result: result });
+// });
+
+app.get("/by-title", async (req, res) => {
+  const result = await db.query("SELECT * FROM book_data ORDER BY title ASC");
+  console.log(result.rows);
+  res.render("index", { result: result.rows });
+});
+
+app.get("/by-most-recent", async (req, res) => {
+  const result = await db.query("SELECT * FROM book_data ORDER BY date_read DESC");
+  console.log(result.rows);
+  res.render("index", { result: result.rows });
+});
+
+app.get("/by-rating", async (req, res) => {
+  const result = await db.query(
+    "SELECT * FROM book_data ORDER BY rating DESC"
+  );
+  console.log(result.rows);
+  res.render("index", { result: result.rows });
 });
 
 app.listen(port, () => {

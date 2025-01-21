@@ -17,21 +17,20 @@
     <% if(locals.result) { %>
       <% result.forEach(result=> { %>
         <div id="<%= result.id %>">
-          <h4>Book title: <%= result.title %>
-          </h4>
-          <p>Author: <%= result.author %>
-          </p>
-          <p>Date read: <%= result.date_read %>
-          </p>
-          <p>Rating: <strong>
-              <%= result.rating %>
-            </strong>/10
-          </p>
-          <p>Review: <%= result.review %>
-          </p>
-          <div>
-            <button type="button" class="edit"><a href="/edit">Edit</a></button>
-            <button type="button" class="delete"><a href="/delete">Delete</a></button>
+          <h4><input type="text" name="title" id="" value="Book title: <%= result.title %>"></h4>
+           <p><input type="text" name="author"  value="Author: <%= result.author %>"></p>
+           <p><input type="text" name="date"  value="Date read: <%= result.date_read %>"></p>
+           <p><input type="text" name="rating"  value="Rating: <%= result.rating %>"></p>
+           <p><input type="text" name="review"  value="Review: <%= result.review %>"></p>
+          <div class="update-forms">
+            <form action="/edit" method="post">
+              <input type="submit" class="edit" value="Edit">
+            </form>
+            <form action="/delete" method="post">
+              <input type="submit" class="delete" value="Delete">
+            </form>
+            <!-- <button type="button" ><a href="/edit">Edit</a></button>
+            <button type="button" name="delete" class="delete"><a href="/delete">Delete</a></button> -->
           </div>
         </div>
         <% }) %>
